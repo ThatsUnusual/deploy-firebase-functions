@@ -16,4 +16,4 @@ firebase deploy \
     -m "${GITHUB_REF} (${GITHUB_SHA})" \
     --project ${FIREBASE_PROJECT} \
     --only functions
-    --token "$FIREBASE_TOKEN"
+    --token "${FIREBASE_TOKEN}"
