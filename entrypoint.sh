@@ -12,8 +12,10 @@ if [ -z "${FIREBASE_PROJECT}" ]; then
     exit 1
 fi
 
+tsc; 
+
 firebase deploy \
     -m "${GITHUB_REF} (${GITHUB_SHA})" \
     --project ${FIREBASE_PROJECT} \
-    --only functions
+    --only functions \
     --token "${FIREBASE_TOKEN}"
